@@ -10,33 +10,37 @@
         android:id="@+id/cajaF"
         android:layout_width="218dp"
         android:layout_height="32dp"
+        android:layout_marginStart="18dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="259dp" />
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/cajaC" />
 
     <EditText
         android:id="@+id/cajaK"
         android:layout_width="218dp"
         android:layout_height="32dp"
+        android:layout_marginStart="18dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="291dp" />
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/cajaF" />
 
     <EditText
         android:id="@+id/cajaR"
         android:layout_width="218dp"
         android:layout_height="32dp"
+        android:layout_marginStart="18dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="323dp" />
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/cajaK" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_lbl_convertir"
@@ -51,18 +55,25 @@
         android:id="@+id/cajaConvertir"
         android:layout_width="258dp"
         android:layout_height="46dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="7dp"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="251dp"
         android:layout_height="31dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="34dp"
         android:gravity="center"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="155dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cajaConvertir">
 
         <RadioButton
             android:id="@+id/radioCentigrados"
@@ -97,16 +108,21 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="14dp"
         android:text="@string/text_lbl_grados"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="200dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="59dp"
         android:layout_height="134dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="227dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <CheckBox
             android:id="@+id/check_C"
@@ -137,10 +153,12 @@
         android:id="@+id/cajaC"
         android:layout_width="218dp"
         android:layout_height="32dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="41dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="227dp" />
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
 </android.support.constraint.ConstraintLayout>
