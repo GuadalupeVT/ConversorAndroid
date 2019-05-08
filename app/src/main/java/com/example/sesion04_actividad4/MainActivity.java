@@ -29,11 +29,39 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
         radioK=findViewById(R.id.radioKelvin);
 
         chkF=findViewById(R.id.check_F);
+        chkF.setOnClickListener(this);
         chkC=findViewById(R.id.check_C);
+        chkC.setOnClickListener(this);
         chkK=findViewById(R.id.check_K);
+        chkK.setOnClickListener(this);
         chkR=findViewById(R.id.check_R);
+        chkR.setOnClickListener(this);
+    }
+    public void onClick(View v) {
+        int click = v.getId();
+        double res=0;
+        double grados=Double.parseDouble(cajaNumAConvertir.getText().toString());
+        if (click==R.id.check_F){
+            if(radioC.isSelected()){
+                cajaC.setText(grados+"");
+            }
+            if(radioF.isSelected()){
+                res=(grados-32)/1.8;
+                cajaC.setText(res+"");
+            }
+            if(radioK.isSelected()){
+                res=grados -273.15;
+                cajaC.setText(res+"");
+            }
+            if(radioR.isSelected()){
+                res=(grados-491)*(5/9);
+                cajaC.setText(res+"");
+            }
+        }
+
     }
 
 
 
-}
+
+    }
