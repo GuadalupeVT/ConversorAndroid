@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Sesion04_Actividad4</string>
+
+    <string name="text_lbl_convertir">Convertir</string>
+
+    <string name="text_cetigrados">C</string>
+    <string name="text_farenheit">F</string>
+    <string name="text_rankin">R</string>
+    <string name="text_kelvin">K</string>
+
+    <string name="text_lbl_grados">A grados</string>
+</resources>
