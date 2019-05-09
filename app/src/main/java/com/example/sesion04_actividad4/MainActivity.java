@@ -94,6 +94,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
                 cajaK.setText(res+"");
             }
         }
+
+        if (click==R.id.check_R){
+            if(radioC.isSelected()){
+                res=grados* (9/5) + 491.67;
+                cajaR.setText(grados+"");
+            }
+            if(radioF.isSelected()){
+                res=grados+459.67;
+                cajaR.setText(grados+"");
+            }
+            if(radioK.isSelected()){
+                res=grados* 1.8;
+                cajaR.setText(grados+"");
+            }
+            if(radioR.isSelected()){
+                cajaR.setText(grados+"");
+            }
+        }
     }
 
 
