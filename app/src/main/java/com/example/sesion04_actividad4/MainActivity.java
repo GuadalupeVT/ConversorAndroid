@@ -39,82 +39,132 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
     }
     public void onClick(View v) {
         int click = v.getId();
-        double res=0;
-        double grados=Double.parseDouble(cajaNumAConvertir.getText().toString());
-        if (click==R.id.check_C){
-            if(radioC.isSelected()){
-                cajaC.setText(grados+"");
+    double grados = Double.parseDouble(cajaNumAConvertir.getText().toString());
+
+        if (radioC.isChecked()) {
+            cajaC.setText("");
+            cajaF.setText("");
+            cajaR.setText("");
+            cajaK.setText("");
+            chkC.setChecked(false);
+            chkF.setChecked(false);
+            chkR.setChecked(false);
+            chkK.setChecked(false);
+
+            if (click == R.id.check_C) {
+                cajaC.setText(grados + "");
+                chkC.setChecked(true);
             }
-            if(radioF.isSelected()){
-                res=(grados-32)/1.8;
-                cajaC.setText(res+"");
+            if (click == R.id.check_F) {
+                double res = grados * 1.8 + 32;
+                cajaF.setText(res + "");
+                chkF.setChecked(true);
             }
-            if(radioK.isSelected()){
-                res=grados -273.15;
-                cajaC.setText(res+"");
+            if (click == R.id.check_R) {
+                double res = (grados * 1.8 )+ 491.67;
+                cajaR.setText(res + "");
+                chkR.setChecked(true);
             }
-            if(radioR.isSelected()){
-                res=(grados-491)*(5/9);
-                cajaC.setText(res+"");
+            if (click == R.id.check_K) {
+                double res = grados + 273.15;
+                cajaK.setText(res + "");
+                chkK.setChecked(true);
             }
         }
 
+        if (radioF.isChecked()) {
+            cajaC.setText("");
+            cajaF.setText("");
+            cajaR.setText("");
+            cajaK.setText("");
+            chkC.setChecked(false);
+            chkF.setChecked(false);
+            chkR.setChecked(false);
+            chkK.setChecked(false);
 
-        if (click==R.id.check_F){
-            if(radioC.isSelected()){
-                res=grados*1.8+32;
-                cajaF.setText(grados+"");
+            if (click == R.id.check_C) {
+                double res=(grados-32)/1.8;
+                cajaC.setText(String.valueOf(res));
+                chkC.setChecked(true);
             }
-            if(radioF.isSelected()){
-                cajaF.setText(grados+"");
+            if (click == R.id.check_F) {
+                cajaF.setText(grados + "");
+                chkF.setChecked(true);
             }
-            if(radioK.isSelected()){
-                res=((9/5)*grados)-459.67;
-                cajaF.setText(res+"");
+            if (click == R.id.check_R) {
+                double res = grados + 459.67;
+                cajaR.setText(res + "");
+                chkR.setChecked(true);
             }
-            if(radioR.isSelected()){
-                res=grados-459.67;
-                cajaF.setText(res+"");
-            }
-        }
-        if (click==R.id.check_K){
-            if(radioC.isSelected()){
-                res=grados+273.15;
-                cajaK.setText(grados+"");
-            }
-            if(radioF.isSelected()){
-                res=(grados+459.67)/1.8;
-                cajaK.setText(grados+"");
-            }
-            if(radioK.isSelected()){
-                cajaK.setText(grados+"");
-            }
-            if(radioR.isSelected()){
-                res=grados*(5/9);
-                cajaK.setText(res+"");
+            if (click == R.id.check_K) {
+                double res =((grados-32)/1.8)+273.15;
+                cajaK.setText(res + "");
+                chkK.setChecked(true);
             }
         }
 
-        if (click==R.id.check_R){
-            if(radioC.isSelected()){
-                res=grados* (9/5) + 491.67;
-                cajaR.setText(grados+"");
+        if (radioR.isChecked()) {
+            cajaC.setText("");
+            cajaF.setText("");
+            cajaR.setText("");
+            cajaK.setText("");
+            chkC.setChecked(false);
+            chkF.setChecked(false);
+            chkR.setChecked(false);
+            chkK.setChecked(false);
+
+            if (click == R.id.check_C) {
+                double res= (grados-491.67)/1.8;
+                cajaC.setText(res + "");
+                chkC.setChecked(true);
             }
-            if(radioF.isSelected()){
-                res=grados+459.67;
-                cajaR.setText(grados+"");
+            if (click == R.id.check_F) {
+                double res=grados-459.67;
+                cajaF.setText(res + "");
+                chkF.setChecked(true);
             }
-            if(radioK.isSelected()){
-                res=grados* 1.8;
-                cajaR.setText(grados+"");
+            if (click == R.id.check_R) {
+                cajaR.setText(grados+ "");
+                chkR.setChecked(true);
             }
-            if(radioR.isSelected()){
-                cajaR.setText(grados+"");
+            if (click == R.id.check_K) {
+                double res =grados*(5/9.);
+                cajaK.setText(res + "");
+                chkK.setChecked(true);
             }
         }
+
+        if (radioK.isChecked()) {
+            cajaC.setText("");
+            cajaF.setText("");
+            cajaR.setText("");
+            cajaK.setText("");
+            chkC.setChecked(false);
+            chkF.setChecked(false);
+            chkR.setChecked(false);
+            chkK.setChecked(false);
+
+            if (click == R.id.check_C) {
+                double res=grados-273.15;
+                cajaC.setText(res + "");
+                chkC.setChecked(true);
+            }
+            if (click == R.id.check_F) {
+                double res=((grados-273.15)*1.8 )+ 32;
+                cajaF.setText(res + "");
+                chkF.setChecked(true);
+            }
+            if (click == R.id.check_R) {
+                double res=grados*1.8;
+                cajaR.setText(res+ "");
+                chkR.setChecked(true);
+            }
+            if (click == R.id.check_K) {
+                cajaK.setText(grados+ "");
+                chkK.setChecked(true);
+            }
+        }
+
     }
-
-
-
 
     }
