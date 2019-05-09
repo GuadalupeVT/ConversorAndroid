@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
         int click = v.getId();
         double res=0;
         double grados=Double.parseDouble(cajaNumAConvertir.getText().toString());
-        if (click==R.id.check_F){
+        if (click==R.id.check_C){
             if(radioC.isSelected()){
                 cajaC.setText(grados+"");
             }
@@ -56,6 +56,25 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnCli
             if(radioR.isSelected()){
                 res=(grados-491)*(5/9);
                 cajaC.setText(res+"");
+            }
+        }
+
+
+        if (click==R.id.check_F){
+            if(radioC.isSelected()){
+                res=grados*1.8+32;
+                cajaF.setText(grados+"");
+            }
+            if(radioF.isSelected()){
+                cajaF.setText(grados+"");
+            }
+            if(radioK.isSelected()){
+                res=((9/5)*grados)-459.67;
+                cajaF.setText(res+"");
+            }
+            if(radioR.isSelected()){
+                res=grados-459.67;
+                cajaF.setText(res+"");
             }
         }
 
